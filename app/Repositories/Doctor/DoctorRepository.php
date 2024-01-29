@@ -41,7 +41,7 @@ class DoctorRepository implements DoctorRepositoryInterface {
 
             $doctor = Doctor::create($doctorData);
 
-            $doctor->doctorappointments()->sync($doctorData['appointments']);
+            $doctor->doctorappointments()->attach($doctorData['appointments']);
 
             DB::commit();
 

@@ -26,8 +26,7 @@ class DoctorRequest extends FormRequest
             'password' => 'required|min:6',
             'phone' => 'nullable',
             'section_id' => 'required|exists:sections,id',
-            'appointments' => 'required|array|min:1',
-            'appointments.*' => 'integer|exists:appointments,id',
+            'appointments.*' => 'required|integer|exists:appointments,id',
             'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif',
         ];
     }

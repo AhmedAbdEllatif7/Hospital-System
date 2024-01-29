@@ -32,7 +32,7 @@
                     <a href="{{route('doctors.create')}}" class="btn btn-primary" role="button"
                        aria-pressed="true">{{trans('doctors.add_doctor')}}</a>
                     <button type="button" class="btn btn-danger"
-                            id="btn_delete_all">{{trans('doctors.deleteSelected')}}</button>
+                            id="btn_delete_all">{{trans('doctors.delete_select')}}</button>
 
                 </div>
                 <div class="card-body">

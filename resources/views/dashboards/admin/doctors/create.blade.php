@@ -39,9 +39,8 @@
             <div class="col-lg-12 col-md-12">
                 <div class="card">
                     <div class="card-body">
-                        <form action="{{ route('doctors.store') }}" method="post" autocomplete="off"
-                            enctype="multipart/form-data">
-                            {{ csrf_field() }}
+                        <form action="{{ route('doctors.store') }}" method="POST" autocomplete="off" enctype="multipart/form-data">
+                            @csrf
                             <div class="pd-30 pd-sm-40 bg-gray-200">
                                 <div class="row row-xs align-items-center mg-b-20">
                                     <div class="col-md-1">
@@ -116,21 +115,20 @@
 
                                 <div class="row row-xs align-items-center mg-b-20">
                                     <div class="col-md-1">
-                                        <label for="exampleInputEmail1">
-                                            {{trans('doctors.appointments')}}</label>
+                                        <label for="appointments">
+                                            {{ trans('doctors.appointments') }}
+                                        </label>
                                     </div>
-
+                                
                                     <div class="col-md-11 mg-t-5 mg-md-t-0">
-                                        <select multiple="multiple" class="testselect2" name="appointments[]">
-                                            <option selected name="appointments[]" value="" selected disabled>-- {{trans('Doctors.select_appointments')}} --</option>
+                                        <select multiple="multiple" class="form-control testselect2" name="appointments[]" id="appointments">
                                             @foreach($appointments as $appointment)
-                                                <option value="{{$appointment->id}}">{{$appointment->name}}</option>
+                                                <option value="{{ $appointment->id }}">{{ $appointment->name }}</option>
                                             @endforeach
                                         </select>
-
                                     </div>
-
                                 </div>
+                                
 
 
 
