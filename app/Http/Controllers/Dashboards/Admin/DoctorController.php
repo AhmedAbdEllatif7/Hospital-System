@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Dashboards\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\DoctorRequest;
+use App\Http\Requests\AdminDashboard\DoctorRequest;
 use App\Repositories\Interfaces\Doctor\DoctorRepositoryInterface;
 use App\Models\Doctor;
 use Illuminate\Http\Request;

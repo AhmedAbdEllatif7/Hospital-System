@@ -3,10 +3,9 @@
 namespace App\Http\Controllers\Dashboards\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\SectionRequest;
+use App\Http\Requests\AdminDashboard\SectionRequest;
 use App\Repositories\Interfaces\Section\SectionRepositoryInterface;
 use App\Models\Section;
-use Illuminate\Http\Request;
 
 class SectionController extends Controller
 {

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Dashboards\Admin\DoctorController;
 use App\Http\Controllers\Dashboards\Admin\SectionController;
+use App\Http\Controllers\Dashboards\Admin\Services\SingleServiceController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -78,11 +79,11 @@ Route::group(
 
 
 
-        ################################### BEGIN SECTION  ###################################
+        ################################### BEGIN SINGLE SERVICE  ###################################
 
-        Route::resource('sections' , SectionController::class);
+        Route::resource('single-services' , SingleServiceController::class);
 
-        ################################### END SECTION  ###################################
+        ################################### END SINGLE SERVICE  ###################################
 
 
 
